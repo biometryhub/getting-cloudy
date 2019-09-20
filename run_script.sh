@@ -12,11 +12,12 @@ Rscript script.R && touch "success"
 
 if test -f "success"
 then
-#    //if block code
+    # R script succeeded
     mail -s "Success" < /dev/null "your_email_here@example.com"
 else
-#   // else block code.
+    # R script failed
     mail -s "Failed" < /dev/null "your_email_here@example.com"
 fi
 
+# Uncomment if you want to shutdown on completion
 # sudo shutdown -h now
