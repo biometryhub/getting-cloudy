@@ -56,7 +56,13 @@ chmod +x run_script.sh
 Then modify the relevant parts within the script and run it like so:
 
 ```
+screen
+```
+
+This will enter a "shell within a shell" of sorts, and you can start your script running there:
+
+```
 ./run_script.sh
 ```
 
-When it finishes, it will email you that it has finished, and optionally shutdown the server.
+Press `Ctrl+a, d` to send `screen` to the background (keep it running, but enable you to disconnect). At any point you can reconnect and bring up the `screen` shell by running `screen -r` on a regular shell of the same machine to check progress. When it finishes, it will email you that it has finished, and optionally shutdown the server.
